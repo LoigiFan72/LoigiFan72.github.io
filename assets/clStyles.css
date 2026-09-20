@@ -1,8 +1,3 @@
-body
-{
-    background-color:#0a0743
-}
-
 .clDefBgMenu
 {
     color: #ffb700;
@@ -22,6 +17,74 @@ body
     color: #0cb164;
 }
 
+.clProjListing a 
+{
+    color: #0cb164;
+    text-decoration: none;
+}
+
+.clProjListing a:hover 
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.clProjListing a:visited 
+{
+    color: #0cb164;
+}
+
+.clNavMenu
+{
+    font-family: 'mochimatic', sans-serif;
+    color: #0cb164;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 48px;
+}
+
+.clVideoMenu
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.clVideoMenu video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS Standard Layout changes */
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#0a0743
+}
+
+video 
+{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#bar li 
+{
+    list-style: none;
+}
+
 #bar
 {
     display: flex;
@@ -37,24 +100,6 @@ body
     background-color: #03497e;
 
 }
-
-#bar li 
-{
-    list-style: none;
-}
-
-.clNavMenu
-{
-    font-family: 'mochimatic', sans-serif;
-    color: #0cb164;
-    text-decoration: none;
-    margin-left: 20px;
-    margin-right: 5px;
-    margin-top: 5px;
-    font-size: 48px;
-}
-
-/* Some Button Layout Changes */
 
 button 
 {

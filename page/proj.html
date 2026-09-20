@@ -1,8 +1,8 @@
 <!--- Author: Stephen A. -->
-<!--- Filename: aboutme.html -->
+<!--- Filename: proj.html -->
 <!---        -->
 <!--- Project: lfweb -->
-<!--- Purpose: Project page for lfweb -->
+<!--- Purpose: Current user projects page for lfweb -->
 
 <!-- Standard Header-->
 <!DOCTYPE html>
@@ -16,24 +16,9 @@
 <!-- Main Menu -->
 
 <body>
-    <audio id="titleTheme" autoplay>
-        <source src="../assets/seq/SSEQ_MARIOKART_TITLE.aac" type="audio/aac">
+    <audio autoplay loop>
+        <source src="../assets/seq/SSEQ_LFWEB_PROJECTMENU.aac" type="audio/aac">
     </audio>
-
-    <script>
-        const titleTheme = document.getElementById("titleTheme");
-
-        titleTheme.play().catch(() => {
-            const startAudio = () => {
-                titleTheme.play();
-                document.removeEventListener("click", startAudio);
-                document.removeEventListener("keydown", startAudio);
-            };
-
-            document.addEventListener("click", startAudio);
-            document.addEventListener("keydown", startAudio);
-        });
-    </script>
 
     <div class = "clDefBgMenu">
     <!-- Nav Menu -->
@@ -51,20 +36,50 @@
             <li>
                 <button onclick="window.location.href='../page/proj.html'">Projects</button>
             </li>
-        </nav>
-    <!-- Page Menu -->
-    
 
-        <h1>Active Projects:</h1>
-            <!-- CTR -->
+            <li>
+                <button onclick="window.location.href='../page/scary.html'">Funny Video</button>
+            </li>
+        </nav>
+
+        <!-- Page Menu -->
+    
+        <h1>Decompilation Projects:</h1>
+        <!-- CTR Esstenially -->
         <ul class="clProjListing">
-            <li> <a href="ctrsdk.com"><b>CTR_SDK</b></a> </li>
-            <li> <a href="nw4crepo.com"><b>NintendoWare4Ctr</b></a> </li>
-            <li> <a href="seadrepo.com"><b>sead for Ctr</b></a> </li>
-            <li> <a href="imgdbrepo.com"><b>ImageDataBase library for CTR</b></a> </li>
-            <li> <a href="ctrfacelib.com"></a> </li>
+            <li> <a href="https://github.com/ctrdecomp/CTR_SDK"><b>CTR_SDK</b></a> </li>
+            <p>--The standard Software Development Kit (SDK) developed by 
+            <b><a href="https://en.wikipedia.org/wiki/Nintendo_Software_Planning_%26_Development">Nintendo SPD</b></a> 
+            for the <b><a href="https://en.wikipedia.org/wiki/Nintendo_3DS">Nintendo 3DS™</b></a></p>
+
+            <li> <a href="https://github.com/ctrdecomp/NintendoWare4Ctr"><b>NintendoWare4Ctr</b></a> </li>
+            <p>--A 3DS engine issued to third-party developers.</p>
+            <!-- spelling plz -->
+            <p>--Fun fact: by the Switch era, Nintendo gave this engine a name, <b>the "Bazel Engine"</b> and intergrated it into the main <b>NintendoSDK</b>.</p>
+
+            <li> <a href="https://github.com/ctrdecomp/sead"><b>sead</b></a> </li>
+            <p>--The Standard C++ library used in <b><a href="https://en.wikipedia.org/wiki/Nintendo_Entertainment_Planning_%26_Development">Nintendo EPD</b></a>
+             (formerly <b><a href ="https://en.wikipedia.org/wiki/Nintendo_Entertainment_Analysis_%26_Development">Nintendo EAD</b></a>)</p>
+
+            <li> <a href="https://github.com/ctrdecomp"><b>ctrdecomp</a></b> </li>
+            <p>--Visit us here for 3DS Decompilation projects!</p>
         </ul>
 
-        <p>Please note: CTR is the Nintendo 3DS.</p>
+        <h1>My Projects</h1>
+        <!-- Future / Personal -->
+        <ul class="clProjListing">
+            <li> <a href="https://github.com/LoigiFan72/alstd"><b>Alex Standard C++ Library (alstd)</b> [NOT STARTED]</a> </li>
+            <p>--A standard C++ soon-to-be worked on by me, I will assign this for use in projects in the future if needed.</p>
+        </ul>
+
+        <h1>Dead / Inactive Projects</h1>
+        <!-- Dead Projs (RIP Dream team)-->
+        <ul class="clProjListing">
+            <li> <a href="https://github.com/Mario-and-Luigi-3Ds-R-D/MILLI4C"><b>Mario & Luigi Dream Team US 1.0 Decompilation Project</b></a> </li>
+            <p>--Former decompilation project which, I lost interest in.</p>
+            <p>--Fun fact: This was my first C++ Project ive ever worked on.</p>
+        </ul>
+        
+        <p><b>Please note: CTR is the Nintendo 3DS.</b></p>
     </div>
 </body>

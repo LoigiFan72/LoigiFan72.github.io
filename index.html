@@ -9,31 +9,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProductTitle</title>
+    <title>Alex A: The Website Arc</title>
     <link rel="stylesheet" href="assets/clStyles.css">
 </head>
 
 <!-- Main Menu -->
 
 <body>
-    <audio id="titleTheme" autoplay>
-        <source src="assets/seq/SSEQ_MARIOKART_TITLE.aac" type="audio/aac">
+    <audio autoplay loop>
+        <source src="assets/seq/SSEQ_LFWEB_TITLE.aac" type="audio/aac">
     </audio>
-
-    <script>
-        const titleTheme = document.getElementById("titleTheme");
-
-        titleTheme.play().catch(() => {
-            const startAudio = () => {
-                titleTheme.play();
-                document.removeEventListener("click", startAudio);
-                document.removeEventListener("keydown", startAudio);
-            };
-
-            document.addEventListener("click", startAudio);
-            document.addEventListener("keydown", startAudio);
-        });
-    </script>
 
     <div class = "clDefBgMenu">
     <!-- Nav Menu -->
@@ -51,9 +36,17 @@
             <li>
                 <button onclick="window.location.href='page/proj.html'">Projects</button>
             </li>
+
+            <li>
+                <button onclick="window.location.href='page/scary.html'">Funny Video</button>
+            </li>
         </nav>
     <!-- Page Menu -->
     
+        <h1>Welcome to best website!! Oh shittings this is best website</h1>
+        <!-- For when I get stephena.dev -->
+        <p>They all say stephena.dev is best website, am i rite?</p>
+        <p>Note: as of currently I am <b>NOT</b> the owner of <b>stephena.dev</b> for when I have the funds to support this, It will be done.</p>
 
         <h1>Fun Facts:</h1>
         <ul>
