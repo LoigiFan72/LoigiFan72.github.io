@@ -9,20 +9,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTSEQUENCE</title>
+    <title>ProductTitle</title>
     <link rel="stylesheet" href="assets/clStyles.css">
 </head>
 
 <!-- Main Menu -->
 
 <body>
-    <audio autoplay loop>
+    <audio id="titleTheme" autoplay>
         <source src="assets/seq/SSEQ_MARIOKART_TITLE.aac" type="audio/aac">
-        Your browser does not support the audio element.
     </audio>
 
-    <div class = "clDefLytMenu">
-        <div id = "bar">
+    <script>
+        const titleTheme = document.getElementById("titleTheme");
+
+        titleTheme.play().catch(() => {
+            const startAudio = () => {
+                titleTheme.play();
+                document.removeEventListener("click", startAudio);
+                document.removeEventListener("keydown", startAudio);
+            };
+
+            document.addEventListener("click", startAudio);
+            document.addEventListener("keydown", startAudio);
+        });
+    </script>
+
+    <div class = "clDefBgMenu">
+    <!-- Nav Menu -->
+        <nav id = "bar">
             <a class = "clNavMenu" href="index.html"><b>Alex Akins</b></a>
 
             <li>
@@ -36,10 +51,25 @@
             <li>
                 <button onclick="window.location.href='page/proj.html'">Projects</button>
             </li>
-        </div>
+        </nav>
+    <!-- Page Menu -->
+    
 
-        <h1>
-            
-        </h1>
+        <h1>Fun Facts:</h1>
+        <ul>
+            <li>
+                "France" isn't real. The country between Germany and Spain? A fat of load water. People try to tell you <i>"Alex, you retard France <b>IS</b> real!!!"</i> I'm sorry but whats a "France"? To further support my theory:
+            </li><br>
+            <!-- Prove france isnt real -->
+            <img src="assets/img/europe.png">
+            <p>See? <b>NOTHING!</b> explain that "French" supporters / people.</p>
+            <p>I see something there in my nightmares sometimes its scary D:</p>
+            <li>1 + 2 = 3, apparently.</li>
+            <li>The sky is blue, and grass is green despite rumors saying otherwise.</li>
+            <li>According to scientists, humans <b>cannot</b> fly.</li>
+            <li>Despite rumors, I'm an actually good programmer. <i>For HTML / CSS / JS? Hell no.</i> <i>For C / C++? Hell yes.</i></li>
+            <li>I need to be working on my web design project, but I am not <i>why?</i> Fuck that shi</li>
+            <li>Mario Kart 7™ shares the same <b>System</b> engine as Nintendogs + Cats™ for <b><i>Nintendo 3DS</b></i></li>
+        </ul>
     </div>
 </body>

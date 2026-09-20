@@ -1,0 +1,60 @@
+<!--- Author: Stephen A. -->
+<!--- Filename: aboutme.html -->
+<!---        -->
+<!--- Project: lfweb -->
+<!--- Purpose: About Me page for lfweb -->
+
+<!-- Standard Header-->
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../assets/clStyles.css">
+</head>
+
+<!-- Main Menu -->
+
+<body>
+    <audio id="titleTheme" autoplay>
+        <source src="../assets/seq/SSEQ_MARIOKART_TITLE.aac" type="audio/aac">
+    </audio>
+
+    <script>
+        const titleTheme = document.getElementById("titleTheme");
+
+        titleTheme.play().catch(() => {
+            const startAudio = () => {
+                titleTheme.play();
+                document.removeEventListener("click", startAudio);
+                document.removeEventListener("keydown", startAudio);
+            };
+
+            document.addEventListener("click", startAudio);
+            document.addEventListener("keydown", startAudio);
+        });
+    </script>
+
+    <div class = "clDefBgMenu">
+    <!-- Nav Menu -->
+        <nav id = "bar">
+            <a class = "clNavMenu" href="../index.html"><b>Alex Akins</b></a>
+
+            <li>
+                <button onclick="window.location.href='../page/aboutme.html'">About Me</button>
+            </li>
+
+            <li>
+                <button onclick="window.location.href='../page/social.html'">Socials</button>
+            </li>
+
+            <li>
+                <button onclick="window.location.href='../page/proj.html'">Projects</button>
+            </li>
+        </nav>
+    <!-- Page Menu -->
+    
+
+        <h1>About me!</h1>
+    </div>
+</body>
